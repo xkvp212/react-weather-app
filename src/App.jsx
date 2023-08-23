@@ -9,7 +9,7 @@ export default function App() {
   const [data,setData] = useState({});
   const[location, setLocation] = useState('');
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=568ba25fb7a27e3b81e5a643039c9de0`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=568ba25fb7a27e3b81e5a643039c9de0`;
   
   const searchLocation = (event) => {
     if(event.key === 'Enter') {
@@ -27,10 +27,11 @@ export default function App() {
     <div className="app">
       <div className="search">
         <input 
+        className="locationInput"
         value={location} 
         onChange={event => setLocation(event.target.value)}
         onKeyDown={searchLocation}
-        placeholder='Enter Location'
+        placeholder='Enter a city'
         type="text"/>
       </div>
       <div className="container">
