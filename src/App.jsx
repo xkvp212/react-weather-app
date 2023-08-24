@@ -31,7 +31,7 @@ export default function App() {
         value={location} 
         onChange={event => setLocation(event.target.value)}
         onKeyDown={searchLocation}
-        placeholder='Enter a city'
+        placeholder='Enter a location'
         type="text"/>
       </div>
       <div className="container">
